@@ -9,7 +9,7 @@ class PagesController extends \BaseController {
 	 */
 	public function getIndex()
 	{
-		//
+		return View::make('pages.index');
 	}
 
 
