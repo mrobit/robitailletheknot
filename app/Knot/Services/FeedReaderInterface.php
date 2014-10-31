@@ -16,6 +16,4 @@ interface FeedReaderInterface {
      */
     public function getFeed();
 
-    private function setClientId();
-
 }

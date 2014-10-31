@@ -9,7 +9,17 @@ class InstagramFeedReader extends FeedReader {
      */
     public function getFeed()
     {
-        $this->setClientId( getenv('CLIENT_ID') );
+        parent::getFeed();
+
+        $response = $this->client->get( $this->recentTagMediaUrl() );
+
+        $data = $response->json();
+
+        return count($data['data']) > 0 ? $data['data'] : [];
     }
 
+    public function recentTagMediaUrl()
+    {
+        return 'https://api.instagram.com/v1/tags/' . $this->tag . '/media/recent?client_id=' . $this->clientId;
+    }
 }

@@ -1,13 +1,25 @@
 <?php namespace Knot\Services;
 
 use GuzzleHttp\Client;
+use Knot\Exceptions\NoClientIdException;
+use Knot\Exceptions\NoTagSetException;
 
 class FeedReader implements FeedReaderInterface {
 
     /**
      * @var Client
      */
-    private $client;
+    protected $client;
+
+    /**
+     * @var $tag string
+     */
+    protected $tag;
+
+    /**
+     * @var string
+     */
+    protected $clientId;
 
     /**
      * @param Client $client
@@ -15,20 +27,45 @@ class FeedReader implements FeedReaderInterface {
     public function __construct(Client $client)
     {
         $this->client = $client;
+        $this->clientId = getenv('CLIENT_ID');
     }
 
     /**
      * Handled by child classes.
      */
-    public function getFeed() {}
+    public function getFeed()
+    {
+        if ( empty($this->tag) )
+        {
+            throw new NoTagSetException;
+        }
+
+        if ( empty($this->clientId))
+        {
+            throw new NoClientIdException;
+        }
+    }
 
     /**
-     * Sets the client ID for the feed reader.
-     *
-     * @return void
+     * @param string $tag
+     * @return $this
      */
-    private function setClientId()
+    public function setTag($tag)
     {
-        $this->clientId = getenv('CLIENT_ID');
+        if ( is_string($tag) && ! empty($tag))
+        {
+            $this->tag = $tag;
+        }
+
+        return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getTag()
+    {
+        return $this->tag;
+    }
+
 }

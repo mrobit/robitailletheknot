@@ -12,8 +12,12 @@
 </head>
 <body>
 
-<h1>Robitaille the Knot</h1>
-<p>Coming soon! #robitailletheknot</p>
+
+@if($feed)
+    @foreach($feed as $f)
+        <img src="<?php echo $f['images']['standard_resolution']['url']; ?>" alt="" />
+    @endforeach
+@endif
 
 </body>
 </html>
