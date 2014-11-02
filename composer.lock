@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2dea2862a11f601cbc9a41910889135a",
+    "hash": "a366ebedb5c2e3ee2ce39d2f79d35bfc",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -147,16 +147,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "9e806208d9b418a58ec86c49078aa94385e64bbd"
+                "reference": "90b5b961dba11f5a1612eeb6fbd59c227112f763"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9e806208d9b418a58ec86c49078aa94385e64bbd",
-                "reference": "9e806208d9b418a58ec86c49078aa94385e64bbd",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/90b5b961dba11f5a1612eeb6fbd59c227112f763",
+                "reference": "90b5b961dba11f5a1612eeb6fbd59c227112f763",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +171,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-ring": "5.0-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -201,7 +201,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-10-16 18:00:41"
+            "time": "2014-10-31 03:26:57"
         },
         {
             "name": "guzzlehttp/ringphp",
@@ -1952,12 +1952,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "8e567de2249a8f7eb8051a855b9d0a6472d38c8e"
+                "reference": "83fd9101183547a3a8cd68c155a5a6f63e7baefb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/8e567de2249a8f7eb8051a855b9d0a6472d38c8e",
-                "reference": "8e567de2249a8f7eb8051a855b9d0a6472d38c8e",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/83fd9101183547a3a8cd68c155a5a6f63e7baefb",
+                "reference": "83fd9101183547a3a8cd68c155a5a6f63e7baefb",
                 "shasum": ""
             },
             "require": {
@@ -2010,7 +2010,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2014-10-16 09:15:15"
+            "time": "2014-10-31 12:40:15"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
