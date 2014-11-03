@@ -3,6 +3,7 @@
 use Illuminate\View\Factory as View;
 use Knot\Services\FeedReaderInterface;
 use Knot\Services\InstagramFeedReader;
+use Knot\Presenters\InstagramFeedPresenter;
 
 class PagesController extends \BaseController {
 
@@ -34,6 +35,8 @@ class PagesController extends \BaseController {
 	public function getIndex()
 	{
         $feed = $this->feed->setTag('robitailletheknot')->getFeed();
+
+        $feed = InstagramFeedPresenter::prepare($feed);
 
 		return $this->view->make('pages.index', compact('feed'));
 	}
