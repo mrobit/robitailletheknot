@@ -1,6 +1,8 @@
 <?php namespace Knot\Services;
 
 use GuzzleHttp\Client;
+use Illuminate\Cache\Repository;
+use Illuminate\Cache\StoreInterface;
 use Knot\Exceptions\NoClientIdException;
 use Knot\Exceptions\NoTagSetException;
 
@@ -22,16 +24,32 @@ class FeedReader implements FeedReaderInterface {
     protected $clientId;
 
     /**
-     * @param Client $client
+     * @var Repository
      */
-    public function __construct(Client $client)
+    protected $cache;
+
+    /**
+     * @var array
+     */
+    protected $data;
+
+    /**
+     * @param Client $client
+     * @param Repository $cache
+     */
+    public function __construct(Client $client, Repository $cache)
     {
         $this->client = $client;
         $this->clientId = getenv('CLIENT_ID');
+        $this->cache = $cache;
     }
 
     /**
      * Handled by child classes.
+     *
+     * @throws NoClientIdException
+     * @throws NoTagSetException
+     * @return array
      */
     public function getFeed()
     {

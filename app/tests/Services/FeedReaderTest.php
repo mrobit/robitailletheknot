@@ -6,13 +6,17 @@ use Mockery as M;
 
 class FeedReaderTest extends TestCase {
 
+    public function __construct()
+    {
+        $this->feed = new FeedReader( M::mock('GuzzleHttp\Client'), M::mock('Illuminate\Cache\Repository'));
+    }
+
     /** @test */
     public function it_sets_the_tag_name()
     {
-        $feed = new FeedReader( M::mock('GuzzleHttp\Client') );
-        $feed->setTag('knot');
+        $this->feed->setTag('knot');
 
-        $this->assertTrue($feed->getTag() === 'knot');
+        $this->assertTrue($this->feed->getTag() === 'knot');
     }
 
     /**
@@ -21,8 +25,7 @@ class FeedReaderTest extends TestCase {
      */
     public function it_throws_an_exception_if_no_tag_is_set()
     {
-        $feed = new FeedReader(M::mock('GuzzleHttp\Client'));
-        $feed->getFeed();
+        $this->feed->getFeed();
     }
 
     /**
@@ -33,8 +36,7 @@ class FeedReaderTest extends TestCase {
     {
         // Remove the CLIENT_ID variable for the sake of testing.
         putenv("CLIENT_ID");
-        $feed = new FeedReader(M::mock('GuzzleHttp\Client'));
-        $feed->setTag('knot');
-        $feed->getFeed();
+        $this->feed->setTag('knot');
+        $this->feed->getFeed();
     }
 } 
