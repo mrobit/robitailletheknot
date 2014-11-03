@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Robitaille the Knot</title>
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 </head>
 <body>
 
 
 @if($feed)
     @foreach($feed as $f)
-        <img src="<?php echo $f['images']['standard_resolution']['url']; ?>" alt="" />
+        <img src="{{ $f->url }}" alt=""/>
     @endforeach
 @endif
 
