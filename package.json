@@ -1,0 +1,14 @@
+{
+  "name": "robitailletheknot",
+  "description": "Site for Melissa and Matt's wedding things! Yay!",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.1.0",
+    "gulp-watch": "^1.1.0"
+  }
+}

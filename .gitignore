@@ -9,3 +9,9 @@ app/config/local/database.php
 
 # IDE Helper
 _ide_helper.php
+
+# Node, front-end stuff, etc.
+npm-debug.log
+public/css/main.min.css
+public/css/main.min.css.map
+node_modules
