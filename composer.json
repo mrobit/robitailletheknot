@@ -6,7 +6,8 @@
   "type": "project",
   "require": {
     "laravel/framework": "4.2.*",
-    "guzzlehttp/guzzle": "~5.0"
+    "guzzlehttp/guzzle": "~5.0",
+    "nesbot/carbon": "~1.13"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "1.11.3",

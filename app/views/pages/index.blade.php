@@ -11,7 +11,28 @@
 
 @if($feed)
     @foreach($feed as $f)
-        <img src="{{ $f->url }}" alt=""/>
+        <div class="item item-{{ $f->type }}">
+            <img src="{{ $f->url }}" alt=""/>
+
+            @unless ($f->comments === false)
+                <div class="item-instagram__comments">
+                    @foreach( $f->comments  as $comment)
+                        <div class="comment">
+                            <div class="comment__date">
+                                {{ $comment['date'] }}
+                            </div>
+                            <div class="comment__name">
+                                <strong>{{ $comment['name'] }}</strong>
+                                ({{ $comment['username'] }})
+                            </div>
+                            <div class="comment__content">
+                                {{ $comment['text'] }}
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endunless
+        </div>
     @endforeach
 @endif
 

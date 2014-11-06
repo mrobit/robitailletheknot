@@ -1,5 +1,7 @@
 <?php namespace Knot\Presenters;
 
+use Carbon\Carbon;
+
 class InstagramFeedPresenter {
 
     /**
@@ -15,9 +17,11 @@ class InstagramFeedPresenter {
         foreach($images as $key => $image)
         {
             $data[$key] = [
+                'type'    => 'instagram',
                 'created' => $image['caption']['created_time'],
                 'caption' => $image['caption']['text'],
                 'url'     => $image['images']['standard_resolution']['url'],
+                'comments'=> static::prepareComments($image['comments'])
             ];
 
             // Typecasting to an object for funsies.
@@ -25,5 +29,33 @@ class InstagramFeedPresenter {
         }
 
         return $data;
+    }
+
+    /**
+     * Set up the comments array.
+     *
+     * @param array $comments
+     * @return array
+     */
+    private static function prepareComments(array $comments)
+    {
+        if ( $comments['count'] === 0 ) return false;
+
+        $comments = $comments['data'];
+
+        foreach($comments as $key => $comment) {
+            // Format the date using Carbon.
+            $date = Carbon::createFromTimestamp($comment['created_time']);
+
+            $data = [];
+            $data['date'] = "{$date->month}/{$date->day}/{$date->year}";
+            $data['text'] = $comment['text'];
+            $data['name'] = $comment['from']['full_name'];
+            $data['username'] = $comment['from']['username'];
+
+            $comments[$key] = $data;
+        }
+
+        return $comments;
     }
 }
