@@ -1,0 +1,50 @@
+// Nav toggle styles
+.nav-toggle {
+  background-color: #555;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 55px;
+  height: 55px;
+
+  @media screen and (min-width: 970px) {
+    left: 100%;
+    right: 0;
+    top: 0;
+  }
+}
+.nav-toggle:focus {
+  outline: none;
+}
+.nav-toggle .line {
+  margin-left: $nav-toggle-line-left;
+  margin-top: -3px;
+  top: 50%;
+}
+.nav-toggle .line,
+.nav-toggle .line::before,
+.nav-toggle .line::after {
+  background-color: lighten(#555, 15%);
+  display: block;
+  height: 6px;
+  position: absolute;
+  width: 40px;
+  left: 0;
+}
+.nav-toggle .line::after,
+.nav-toggle .line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle .line::before {
+  top: -12px;
+}
+.nav-toggle .line::after {
+  bottom: -12px;
+}

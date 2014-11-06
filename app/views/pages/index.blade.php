@@ -8,6 +8,9 @@
 </head>
 <body>
 
+@include('layouts.partials.nav')
+
+<div id="wrap">
 
 @if($feed)
     @foreach($feed as $f)
@@ -36,5 +39,6 @@
     @endforeach
 @endif
 
+</div>
 </body>
 </html>
