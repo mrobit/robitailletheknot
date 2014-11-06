@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Robitaille the Knot</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/main.min.css"/>
 </head>
 <body>
 
