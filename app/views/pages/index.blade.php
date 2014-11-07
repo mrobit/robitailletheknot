@@ -14,6 +14,8 @@
 
 <div id="wrap">
 
+@include('layouts.partials.header')
+
 @if($feed)
     @foreach($feed as $f)
         <div class="item item-{{ $f->type }}">
@@ -41,6 +43,7 @@
     @endforeach
 @endif
 
+@include('layouts.partials.footer')
 </div>
 </body>
 </html>

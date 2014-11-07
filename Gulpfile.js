@@ -10,7 +10,8 @@ var livereload   = require('gulp-livereload');
 // Asset paths.
 var paths = {
   styles: 'app/assets/sass/**/*.scss',
-  css:    'public/css/main.min.css'
+  css:    'public/css/main.min.css',
+  php:    'app/**/*.php'
 };
 
 gulp.task('sass', function() {
@@ -26,6 +27,6 @@ gulp.task('watch', function() {
 
   gulp.watch(paths.styles, ['sass'])
 
-  watch(paths.css)
+  watch([paths.css, paths.php])
     .pipe(livereload());
 });

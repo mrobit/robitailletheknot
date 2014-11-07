@@ -1,5 +1,5 @@
 body {
-  background-color: lighten(#30c092, 40%);
+  background-color: $body-bg-color;
   margin: 0;
   padding: 0;
 }
@@ -15,6 +15,5 @@ body, html {
 #wrap {
   min-height: 100%;
   width: 100%;
-  padding-top: 30px;
 //  padding-left: 200px;
 }
