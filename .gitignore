@@ -12,6 +12,10 @@ _ide_helper.php
 
 # Node, front-end stuff, etc.
 npm-debug.log
+node_modules
+
+# Compiled front end assets - this will be done on deploy.
 public/css/main.min.css
 public/css/main.min.css.map
-node_modules
+publics/js/main.min.js
+publics/js/main.min.js.map
