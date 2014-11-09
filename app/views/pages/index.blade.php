@@ -8,7 +8,14 @@
 @if($feed)
     @foreach($feed as $f)
         <div class="item item-{{ $f->type }}">
-            <img src="{{ $f->url }}" alt=""/>
+            <div class="item-instagram__img-wrapper">
+                <img src="{{ $f->url }}" alt=""/>
+                <div class="caption">
+                <div class="caption__inner">
+                    {{ $f->caption }}
+                </div>
+                </div>
+            </div>
 
             @unless ($f->comments === false)
                 <div class="item-instagram__comments">
