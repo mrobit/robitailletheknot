@@ -1,0 +1,8 @@
+{
+  "name": "robitailletheknot",
+  "description": "Site for Melissa and Matt's wedding, etc.",
+  "private": true,
+  "dependencies": {
+    "hammer.js": "~2.0.4"
+  }
+}
