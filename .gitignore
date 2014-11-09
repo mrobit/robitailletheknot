@@ -10,6 +10,9 @@ app/config/local/database.php
 # IDE Helper
 _ide_helper.php
 
+# Bower packages - installed/compiled on deploy
+app/assets/vendor
+
 # Node, front-end stuff, etc.
 npm-debug.log
 node_modules
