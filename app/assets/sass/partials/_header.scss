@@ -8,6 +8,8 @@
 .header {
   background-color: darken($blue, 10%);
   color: lighten($green, 15%);
+  font-size: 18px;
+  font-weight: 200;
   padding: 40px 0;
 }
 
@@ -15,4 +17,9 @@
 .header p {
   margin: 0;
   padding: 0 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 400;
 }
