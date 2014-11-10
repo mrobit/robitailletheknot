@@ -29,10 +29,11 @@
 .item-instagram__img-wrapper:hover .caption {
   opacity: 1;
 }
-.item-instagram .caption {
+
+.caption {
   background-color: rgba(0,0,0,0.5);
   color: #fff;
-  font-size: 22px;
+  font-size: 14px;
   text-align: center;
   line-height: 1.8;
   border-radius: 6px;
@@ -49,6 +50,10 @@
   display: flex;
   align-items: center;
   transition: 100ms linear opacity;
+
+  @media screen and (min-width: 568px) {
+    font-size: 22px;
+  }
 }
 .caption .caption__inner {
   width: 100%;
