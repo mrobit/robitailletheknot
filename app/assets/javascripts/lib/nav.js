@@ -37,10 +37,12 @@ module.exports = function() {
         Function.prototype.call(setShortNav);
     }
 
-    if ( window.addEventListener ) {
-        window.addEventListener('scroll', scrollHandler, true);
-    } else {
-        window.attachEvent('onscroll', scrollHandler);
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        if ( window.addEventListener ) {
+            window.addEventListener('scroll', scrollHandler, true);
+        } else {
+            window.attachEvent('onscroll', scrollHandler);
+        }
+    });
 
 };

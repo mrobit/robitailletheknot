@@ -27,7 +27,7 @@
   font-size: 18px;
   font-weight: 200;
   padding: 40px 0;
-  transition: 150ms ease-in-out all;
+  transition: 150ms ease-in-out padding;
 }
 
 .header h1,
@@ -39,5 +39,5 @@
 .header h1 {
   font-size: 32px;
   font-weight: 400;
-  transition: 150ms ease-in-out all;
+  transition: 150ms ease-in-out font-size;
 }
