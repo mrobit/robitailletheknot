@@ -40,6 +40,7 @@
 @endif
 
 @include('layouts.partials.footer')
+@include('layouts.partials.scripts')
 </div>
 </body>
 </html>
