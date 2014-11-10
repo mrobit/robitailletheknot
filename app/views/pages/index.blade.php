@@ -5,6 +5,12 @@
 
 @include('layouts.partials.header')
 
+<div class="container">
+    <p class="hiw-section text-center">
+        Add pictures to Instagram and tag them with <strong>#robitailletheknot,</strong> and they'll show up here!
+    </p>
+</div>
+
 @if($feed)
     @foreach($feed as $f)
         <div class="item item-{{ $f->type }}">
