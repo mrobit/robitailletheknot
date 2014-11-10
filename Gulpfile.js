@@ -13,9 +13,10 @@ var source       = require('vinyl-source-stream');
 
 // Asset paths.
 var paths = {
-    styles: 'app/assets/sass/**/*.scss',
-    css:    'public/css/main.min.css',
-    php:    'app/**/*.php'
+    styles:  'app/assets/sass/**/*.scss',
+    scripts: 'app/assets/javascripts/**/*.js',
+    css:     'public/css/main.min.css',
+    php:     'app/**/*.php'
 };
 
 gulp.task('sass', function() {
@@ -28,15 +29,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('watch', function() {
-    livereload.listen();
-
-    gulp.watch(paths.styles, ['sass'])
-
-    watch([paths.css, paths.php])
-        .pipe(livereload());
-});
-
 gulp.task('js', function() {
     browserify('./app/assets/javascripts/main.js')
         .bundle()
@@ -44,3 +36,14 @@ gulp.task('js', function() {
         .pipe(streamify(uglify()))
         .pipe(gulp.dest('./public/js'));
 });
+
+gulp.task('watch', function() {
+    livereload.listen();
+
+    gulp.watch(paths.styles, ['sass']);
+    gulp.watch(paths.scripts, ['js']);
+
+    watch([paths.css, paths.php])
+        .pipe(livereload());
+});
+
