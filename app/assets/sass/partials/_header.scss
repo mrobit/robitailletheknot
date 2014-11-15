@@ -3,7 +3,6 @@
   height: 5px;
   width: 100%;
   background-color: $coral;
-  margin-bottom: 30px;
 }
 
 .header-wrap {
@@ -11,13 +10,15 @@
   top: 0;
   left: 0;
   z-index: 100;
-  height: 150px;
+  height: auto;
+  margin-bottom: 30px;
   width: 100%;
 }
 
 // Scrolled class
 .header-wrap.short .header {
   padding: 10px 0;
+  min-height: 100px;
 }
 .header-wrap.short .header h1 {
   font-size: 22px;
@@ -28,8 +29,9 @@
   color: lighten($green, 15%);
   font-size: 18px;
   font-weight: 200;
+  min-height: 212px;
   padding: 40px 0;
-  transition: 150ms ease-in-out padding;
+  transition: 150ms ease-in-out all;
 }
 
 // Header font styles.
@@ -43,4 +45,14 @@
   font-size: 32px;
   font-weight: 400;
   transition: 150ms ease-in-out font-size;
+}
+
+.countdown-wrap {
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 0 45px;
+  text-transform: uppercase;
+}
+.countdown-wrap > p {
+  font-weight: 700;
 }
