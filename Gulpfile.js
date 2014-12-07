@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var rename       = require('gulp-rename');
 var cssmin       = require('gulp-cssmin');
@@ -13,7 +13,7 @@ var source       = require('vinyl-source-stream');
 
 // Asset paths.
 var paths = {
-    styles:  'app/assets/sass/**/*.scss',
+    styles:  'app/assets/**/*.scss',
     scripts: 'app/assets/javascripts/**/*.js',
     css:     'public/css/main.min.css',
     php:     'app/**/*.php'
