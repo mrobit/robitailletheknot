@@ -16,6 +16,7 @@ app/assets/vendor
 # Node, front-end stuff, etc.
 npm-debug.log
 node_modules
+.sass-cache
 
 # Compiled front end assets - this will be done on deploy.
 public/css/main.min.css
