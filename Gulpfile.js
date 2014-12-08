@@ -22,7 +22,7 @@ var paths = {
 gulp.task('sass', function() {
     gulp.src('app/assets/sass/main.scss')
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({ bundleExec: false }))
         .pipe(autoprefixer('last 10 versions'))
         .pipe(cssmin())
         .pipe(rename({ basename: 'main', suffix: '.min' }))
