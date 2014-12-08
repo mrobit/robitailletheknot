@@ -9,6 +9,10 @@
   text-decoration: none;
   width: 100%;
 
+  @media screen and (max-width: 768px) {
+    margin: 15px auto;
+  }
+
   @include option(round) {
     border-radius: 4px;
   }
