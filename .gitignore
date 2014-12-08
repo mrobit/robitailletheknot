@@ -24,5 +24,6 @@ public/css/main.min.css.map
 # This is a weird side-effect of the gulp-ruby-sass package outputting both main.css
 # and main.css.map. gulp-rename is working on both of these files.
 public/css/main.min.map
-public/js/main.min.js
+
+# Ignore Javascript sourcemaps.
 public/js/main.min.js.map
