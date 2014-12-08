@@ -1,4 +1,7 @@
-var nav   = require('./lib/nav.js')();
+require('./lib/header')();
+require('./lib/nav')();
+require('./lib/smooth-scroll').init();
+
 var countdown = require('./lib/countdown.js');
 
 document.addEventListener('DOMContentLoaded', function() {

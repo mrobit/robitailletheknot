@@ -11,4 +11,5 @@
     @include('layouts.partials.analytics')
 </head>
 <body id="csstyle">
+    <div id="top"></div>
 

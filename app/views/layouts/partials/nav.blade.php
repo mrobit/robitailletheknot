@@ -4,8 +4,7 @@
     </button>
 
     <ul class="nav">
-        <li><a href="#">Feed</a></li>
-        <li><a href="#">Registry</a></li>
-        <li><a href="#">Countdown</a></li>
+        <li><a data-scroll href="#top">Feed</a></li>
+        <li><a data-scroll href="#registry">Registry</a></li>
     </ul>
 </div>
