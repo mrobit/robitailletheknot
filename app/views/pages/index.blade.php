@@ -45,6 +45,8 @@
     @endforeach
 @endif
 
+@include('layouts.partials.registry')
+
 @include('layouts.partials.footer')
 @include('layouts.partials.scripts')
 </div>
