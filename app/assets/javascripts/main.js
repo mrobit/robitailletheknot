@@ -1,14 +1,20 @@
 require('./lib/header')();
 require('./lib/nav')();
+require('./lib/mediaelement-and-player.js');
 require('./lib/smooth-scroll').init();
 
-var countdown = require('./lib/countdown.js');
+(function($) {
+    var countdown = require('./lib/countdown.js');
 
-document.addEventListener('DOMContentLoaded', function() {
-    var countdownElement = document.querySelector('.countdown');
+    $(document).on('ready', function() {
+        var countdownElement = document.querySelector('.countdown');
 
-    countdown( new Date(2015, 5, 27), function(ts) {
-        countdownElement.innerHTML = ts.toString();
+        countdown( new Date(2015, 5, 27), function(ts) {
+            countdownElement.innerHTML = ts.toString();
+        });
+
+        // Run the media element player.
+        $('video,audio').mediaelementplayer();
     });
-});
+})(jQuery);
 
