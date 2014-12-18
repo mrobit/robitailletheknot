@@ -17,9 +17,13 @@ class InstagramFeedReader extends FeedReader {
 
             $body = $response->getBody();
 
-            return $body->read($body->getSize());
-        });
+            $data = $body->read($body->getSize());
 
+            $data = json_decode($data, true);
+
+            return $data['data'];
+        });
+//
         return $data;
     }
 

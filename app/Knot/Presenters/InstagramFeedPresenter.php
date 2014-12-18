@@ -17,10 +17,13 @@ class InstagramFeedPresenter {
         foreach($images as $key => $image)
         {
             $data[$key] = [
-                'type'    => 'instagram',
+                'type'    => $image['type'],
                 'created' => $image['caption']['created_time'],
                 'caption' => $image['caption']['text'],
-                'url'     => $image['images']['standard_resolution']['url'],
+                'url'     => $image['type'] == 'image'
+                    ? $image['images']['standard_resolution']['url']
+                    : $image['videos']['standard_resolution']['url'],
+                'tag'     => static::getItemTag($image),
                 'comments'=> static::prepareComments($image['comments'])
             ];
 
@@ -57,5 +60,21 @@ class InstagramFeedPresenter {
         }
 
         return $comments;
+    }
+
+    /**
+     * Get the image or video tag depending on the type.
+     *
+     * @param $image
+     * @return string
+     */
+    private static function getItemTag($image)
+    {
+        if ($image['type'] == 'image')
+        {
+            return "<img src=\"{$image['images']['standard_resolution']['url']}\" alt=\"\"/>";
+        }
+
+        return "<video src=\"{$image['videos']['standard_resolution']['url']}\"></video>";
     }
 }

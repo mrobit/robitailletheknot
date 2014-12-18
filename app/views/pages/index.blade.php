@@ -13,18 +13,21 @@
 
 @if($feed)
     @foreach($feed as $f)
+
         <div class="item item-{{ $f->type }}">
-            <div class="item-instagram__img-wrapper">
-                <img src="{{ $f->url }}" alt=""/>
+            <div class="item__img-wrapper">
+
+                {{ $f->tag }}
+
                 <div class="caption">
-                <div class="caption__inner">
-                    {{ $f->caption }}
-                </div>
+                    <div class="caption__inner">
+                        {{ $f->caption }}
+                    </div>
                 </div>
             </div>
 
             @unless ($f->comments === false)
-                <div class="item-instagram__comments">
+                <div class="item__comments">
                     @foreach( $f->comments  as $comment)
                         <div class="comment">
                             <div class="comment__date">
@@ -42,13 +45,16 @@
                 </div>
             @endunless
         </div>
+
     @endforeach
 @endif
 
 @include('layouts.partials.registry')
-
 @include('layouts.partials.footer')
-@include('layouts.partials.scripts')
+
 </div>
+
+@include('layouts.partials.scripts')
+
 </body>
 </html>
