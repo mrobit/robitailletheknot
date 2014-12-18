@@ -11,15 +11,13 @@ class InstagramFeedReader extends FeedReader {
     {
         parent::getFeed();
 
-        // Return the cached value if it exists. If not, we'll set it using the Closure
-        // on the "remember" method.
         $data = $this->cache->remember( $this->tag, 360, function()
         {
-            $response = $this->client->get( $this->recentTagMediaUrl() );
+            $response = $this->client->get($this->recentTagMediaUrl());
 
-            $data = $response->json();
+            $body = $response->getBody();
 
-            return $data['data'];
+            return $body->read($body->getSize());
         });
 
         return $data;
