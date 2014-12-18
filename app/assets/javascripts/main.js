@@ -1,4 +1,3 @@
-require('./lib/header')();
 require('./lib/nav')();
 require('./lib/mediaelement-and-player.js');
 require('./lib/smooth-scroll').init();

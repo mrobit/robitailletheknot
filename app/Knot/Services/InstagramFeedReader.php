@@ -11,7 +11,7 @@ class InstagramFeedReader extends FeedReader {
     {
         parent::getFeed();
 
-        $data = $this->cache->remember( $this->tag, 360, function()
+        $data = $this->cache->remember( $this->tag, 5, function()
         {
             $response = $this->client->get($this->recentTagMediaUrl());
 

@@ -14,14 +14,16 @@
 @if($feed)
     @foreach($feed as $f)
 
-        <div class="item item-{{ $f->type }}">
+        <div id="item-{{ $f->id }}" class="item item-{{ $f->type }}">
+            <a class="item__anchor" href="#item-{{ $f->id }}"></a>
             <div class="item__img-wrapper">
 
                 {{ $f->tag }}
 
                 <div class="caption">
-                    <div class="caption__inner">
-                        {{ $f->caption }}
+                    <p>{{ $f->caption }}</p>
+                    <div class="caption__date">
+                        {{ $f->date }}
                     </div>
                 </div>
             </div>

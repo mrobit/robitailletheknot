@@ -18,7 +18,8 @@ class InstagramFeedPresenter {
         {
             $data[$key] = [
                 'type'    => $image['type'],
-                'created' => $image['caption']['created_time'],
+                'id'      => $image['id'],
+                'date'    => static::getFormattedDate($image['created_time']),
                 'caption' => $image['caption']['text'],
                 'url'     => $image['type'] == 'image'
                     ? $image['images']['standard_resolution']['url']
@@ -35,6 +36,17 @@ class InstagramFeedPresenter {
     }
 
     /**
+     * @param string $date
+     * @return string
+     */
+    private static function getFormattedDate($date)
+    {
+        $date = Carbon::createFromTimestamp($date);
+
+        return "{$date->month}/{$date->day}/{$date->year}";
+    }
+
+    /**
      * Set up the comments array.
      *
      * @param array $comments
@@ -47,11 +59,8 @@ class InstagramFeedPresenter {
         $comments = $comments['data'];
 
         foreach($comments as $key => $comment) {
-            // Format the date using Carbon.
-            $date = Carbon::createFromTimestamp($comment['created_time']);
-
             $data = [];
-            $data['date'] = "{$date->month}/{$date->day}/{$date->year}";
+            $data['date'] = static::getFormattedDate($comment['created_time']);
             $data['text'] = $comment['text'];
             $data['name'] = $comment['from']['full_name'];
             $data['username'] = $comment['from']['username'];

@@ -2,9 +2,12 @@
   background-color: darken($green, 30%);
 
   @include component(copyright) {
-    color: #fff;
     font-size: 13px;
     margin: 0;
     padding: 30px 0;
+
+    &, a {
+      color: #fff;
+    }
   }
 }

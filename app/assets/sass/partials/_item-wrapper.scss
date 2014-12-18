@@ -1,9 +1,7 @@
 .item {
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15);
   background-color: #fff;
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 0 15px 30px;
+  margin: 0 15px 60px;
   max-width: 600px;
   position: relative;
 
@@ -26,21 +24,8 @@
   position: relative;
 }
 
-.caption {
-  background-color: #333;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  line-height: 1.8;
-  padding: 20px;
-}
-.caption .caption__inner {
-  width: 100%;
-}
-
 .item img,
 .item video {
-  border-radius: 4px 4px 0 0;
   display: block;
   max-width: 100%;
   height: auto;

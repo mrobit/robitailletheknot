@@ -1,0 +1,9 @@
+@include component(caption__date) {
+  color: lighten(#333, 15%);
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
