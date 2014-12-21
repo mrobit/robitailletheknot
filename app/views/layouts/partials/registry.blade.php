@@ -16,7 +16,7 @@
                 <a class="btn --round --cta --padded" href="https://www.zola.com/registry/robitailletheknot">Zola registry</a>
             </div>
             <div class="col-sm-3">
-                <a class="btn --round --cta --padded" href="#">Target registry</a>
+                <a class="btn --round --cta --padded" href="http://www.target.com/gift-registry/giftgiver?registryId=8Kr_ZorQkYRcqlfb5I3LtA&registryType=WEDDING">Target registry</a>
             </div>
         </div>
     </div>
