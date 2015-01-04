@@ -4,7 +4,8 @@
     </button>
 
     <ul class="nav">
-        <li><a data-scroll href="#top">Feed</a></li>
-        <li><a data-scroll href="#registry">Registry</a></li>
+        <li>{{ link_to_route('index', 'Home') }}</li>
+        <li>{{ link_to_route('registry', 'Registry') }}</li>
+        <li>{{ link_to_route('details', 'Details') }}</li>
     </ul>
 </div>

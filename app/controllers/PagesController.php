@@ -32,7 +32,7 @@ class PagesController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function index()
 	{
         $feed = $this->feed->setTag('robitailletheknot')->getFeed();
 
@@ -41,5 +41,19 @@ class PagesController extends \BaseController {
 		return $this->view->make('pages.index', compact('feed'));
 	}
 
+    public function registry()
+    {
+        return $this->view->make('pages.registry');
+    }
+
+    /**
+     * Get the details page.
+     *
+     * @return Response
+     */
+    public function details()
+    {
+        return $this->view->make('pages.details');
+    }
 
 }

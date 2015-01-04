@@ -1,9 +1,6 @@
-@include('layouts.partials.head')
-@include('layouts.partials.nav')
+@extends('layouts.application')
 
-<div id="wrap">
-
-@include('layouts.partials.header')
+@section('content')
 
 <div class="container">
     <p class="hiw-section text-center">
@@ -51,12 +48,5 @@
     @endforeach
 @endif
 
-@include('layouts.partials.registry')
-@include('layouts.partials.footer')
+@stop
 
-</div>
-
-@include('layouts.partials.scripts')
-
-</body>
-</html>
