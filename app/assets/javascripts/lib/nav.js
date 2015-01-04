@@ -30,7 +30,11 @@ module.exports = function() {
          * @returns {boolean}
          */
         var isMobile = function() {
-            return window.outerWidth <= 768;
+            if (window.outerWidth != 0) {
+                return window.outerWidth <= 768;
+            }
+
+            return screen.width <= 768;
         };
 
         /**
@@ -40,6 +44,12 @@ module.exports = function() {
          * @type {Object}
          */
         var api = {};
+
+        /**
+         * Holds the cached `isMobile` result, used on resize.
+         * @type {boolean}
+         */
+        var mobileState = isMobile();
 
         /**
          * Returns whether the sidebar is open or not.
