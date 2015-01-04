@@ -1,0 +1,8 @@
+body {
+  color: $text-color;
+}
+
+hr {
+  border: 0 none;
+  border-bottom: 1px solid darken($green, 10%);
+}
