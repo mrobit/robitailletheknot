@@ -1,9 +1,3 @@
-@include location(registry) {
-  background-color: #fff;
-  margin-top: 50px;
-  padding: 50px 0;
-
-  @include component(registry-header) {
-    margin: 0 0 15px;
-  }
+@include component(registry-header) {
+  margin: 0 0 15px;
 }
