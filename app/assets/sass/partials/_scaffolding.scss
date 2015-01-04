@@ -15,8 +15,16 @@ body, html {
 #wrap {
   min-height: 100%;
   width: 100%;
+  margin-bottom: -77px;
 
   @media screen and (min-width: 970px) {
     padding-left: 200px;
   }
 }
+
+#wrap::after {
+  content: '';
+  display: block;
+  height: 77px;
+}
+
