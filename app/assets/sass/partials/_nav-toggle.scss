@@ -13,9 +13,7 @@
   height: 55px;
 
   @media screen and (min-width: 970px) {
-    left: 100%;
-    right: 0;
-    top: 0;
+    display: none;
   }
 }
 .nav-toggle:focus {
