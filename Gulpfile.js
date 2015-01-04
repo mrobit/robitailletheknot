@@ -47,3 +47,4 @@ gulp.task('watch', function() {
         .pipe(livereload());
 });
 
+gulp.task('default', ['sass', 'js', 'watch']);
