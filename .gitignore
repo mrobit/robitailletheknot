@@ -27,3 +27,5 @@ public/css/main.min.map
 
 # Ignore Javascript sourcemaps.
 public/js/main.min.js.map
+
+tests/_output/*
