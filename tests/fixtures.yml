@@ -1,0 +1,5 @@
+Knot\Users\User:
+  email:      $string$integer@email.com
+  password:   $string
+  created_at: $date
+  created_at: $date
