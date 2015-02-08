@@ -1,6 +1,5 @@
 @include location(footer) {
   background-color: darken($green, 30%);
-  height: 77px;
 
   @media screen and (min-width: 760px) {
     padding-left: 200px;
