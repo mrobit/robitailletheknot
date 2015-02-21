@@ -21,7 +21,8 @@ Route::post('auth/login', [
  * Dashboard
  */
 Route::get('dashboard', [
-    'as'   => 'dashboard_path',
-    'uses' => 'DashboardController@index',
+    'before' => 'auth',
+    'as'     => 'dashboard_path',
+    'uses'   => 'DashboardController@index',
 ]);
 

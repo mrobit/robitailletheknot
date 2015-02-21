@@ -1,9 +1,15 @@
 <?php namespace Knot\Users;
 
+use Illuminate\Auth\Reminders\RemindableInterface;
+use Illuminate\Auth\Reminders\RemindableTrait;
+use Illuminate\Auth\UserInterface;
+use Illuminate\Auth\UserTrait;
 use Illuminate\Database\Eloquent\Model;
 use Hash, Eloquent;
 
-class User extends Eloquent {
+class User extends Eloquent implements UserInterface, RemindableInterface {
+
+    use UserTrait, RemindableTrait;
 
     /**
      * Validation rules

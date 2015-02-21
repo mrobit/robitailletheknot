@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-offset-3">
                 {{ Form::open(['class' => 'login-form', 'method' => 'POST', 'route' => 'login_path']) }}
                     <h2>Log In</h2>
 

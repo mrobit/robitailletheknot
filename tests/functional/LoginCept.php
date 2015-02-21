@@ -6,4 +6,4 @@ $I->wantTo('log in to the dashboard');
 $I->amOnRoute('login_path');
 $I->signIn();
 
-$I->amOnRoute('dashboard_path');
+$I->seeCurrentRouteIs('dashboard_path');

@@ -25,6 +25,11 @@ class SessionsController extends \BaseController {
 			return Redirect::back()->withErrors($validation);
 		}
 
-		return Redirect::route('dashboard_path');
+		if (Auth::attempt($input))
+		{
+			return Redirect::route('dashboard_path');
+		}
+
+		return Redirect::back()->with('errors', "Email or password was incorrect or not found.");
 	}
 }
