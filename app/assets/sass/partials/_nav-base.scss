@@ -1,4 +1,4 @@
-@include component(sidebar) {
+.sidebar {
   background-color: #444;
   position: fixed;
   top: 0;
@@ -17,11 +17,11 @@
     height: 100%;
   }
 
-  @include option('open') {
+  &.\--open {
     left: 0;
   }
 
-  @include option('close') {
+  &.\--close {
     left: -200px;
   }
 }

@@ -1,11 +1,11 @@
-@include location(footer) {
+.\@footer {
   background-color: darken($green, 30%);
 
   @media screen and (min-width: 760px) {
     padding-left: 200px;
   }
 
-  @include component(copyright) {
+  .copyright {
     font-size: 13px;
     margin: 0;
     padding: 30px 0;
