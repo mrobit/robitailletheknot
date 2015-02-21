@@ -23,9 +23,7 @@ var paths = {
 gulp.task('sass', function() {
     gulp.src('app/assets/sass/main.scss')
         .pipe(plumber())
-        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(sourcemaps.write())
         .pipe(autoprefixer('last 10 versions'))
         .pipe(cssmin())
         .pipe(rename({ basename: 'main', suffix: '.min' }))
