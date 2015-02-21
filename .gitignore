@@ -19,6 +19,8 @@ node_modules
 .sass-cache
 
 # Compiled front end assets - this will be done on deploy.
+public/css/main.css
+public/css/main.min.css
 public/css/main.css.map
 public/css/main.min.css.map
 # This is a weird side-effect of the gulp-ruby-sass package outputting both main.css
