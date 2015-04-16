@@ -29,12 +29,11 @@
                 <div class="item__comments">
                     @foreach( $f->comments  as $comment)
                         <div class="comment">
+                            <div class="comment__name">
+                                <strong>{{ $comment['name'] }} ({{ $comment['username'] }})</strong>
+                            </div>
                             <div class="comment__date">
                                 {{ $comment['date'] }}
-                            </div>
-                            <div class="comment__name">
-                                <strong>{{ $comment['name'] }}</strong>
-                                ({{ $comment['username'] }})
                             </div>
                             <div class="comment__content">
                                 {{ $comment['text'] }}

@@ -33,29 +33,3 @@
 .mejs-container:focus {
   outline: none;
 }
-.comment {
-  background-color: #fff;
-  color: #000;
-  border-top: 1px solid darken(#fff, 10%);
-  font-size: 13px;
-  padding: 10px 15px;
-  position: relative;
-}
-.comment:first-child {
-  border-top: 0 none;
-}
-.comment .comment__date {
-  display: block;
-  margin-bottom: 10px;
-
-  @media screen and (min-width: 568px) {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-}
-.comment .comment__name {
-  border-bottom: 1px solid darken(#fff, 5%);
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-}

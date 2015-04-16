@@ -1,0 +1,17 @@
++component(contentinfo)
+  background-color: darken($green, 30%)
+  padding-bottom: 30px
+  padding-top: 30px
+  margin-top: 25px
+
+  &, a
+    color: darken($green, 40%)
+
+  @media screen and (min-width: 760px)
+    padding-left: 200px
+
+  +component(copyright)
+    margin: 0
+    padding: 30px 0
+    text-align: center
+

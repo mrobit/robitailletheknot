@@ -1,0 +1,35 @@
++component(comment)
+  background-color: #fff
+  color: #000
+  border-top: 1px solid darken(white, 10%)
+  font-size: 16px
+  position: relative
+  &:first-child
+    border-top: 0 none
+
+  +part(date)
+    display: block
+    font-size: 14px
+
+    @media screen and (max-width: 567px)
+      border-bottom: 1px solid darken(white, 5%)
+      padding-left: 10px
+      padding-bottom: 10px
+
+    @media screen and (min-width: 568px)
+      position: absolute
+      right: 15px
+      top: 10px
+
+  +part(name)
+    font-size: 18px
+    font-weight: 500
+    padding: 10px 10px 5px
+
+    @media screen and (min-width: 568px)
+      border-bottom: 1px solid darken(white, 5%)
+      padding-bottom: 10px
+
+  +part(content)
+    padding: 10px
+    margin-top: 0
