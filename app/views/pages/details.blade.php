@@ -3,42 +3,48 @@
 @section('content')
     <section class="details container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-sm-12">
                 <h1 class="details__header text-center">
                     Where and when?
                 </h1>
             </div>
         </div>
         <div class="row text-center">
-            <div class="details__column col-sm-6">
-                <h2>
-                    Ceremony
-                </h2>
+            <div class="col-md-6 col-md-offset-3">
+                <div class="details__column col-sm-6">
+                    <h2>
+                        <strong>
+                            Ceremony &ndash;
+                        </strong>
 
-                <p>
-                    2:00PM
-                </p>
+                        <span class="details__column__time">
+                            2:00PM
+                        </span>
+                    </h2>
 
-                <p>
-                    <strong>Sacred Heart Church</strong> <br/>
-                    12 Summer St. <br/>
-                    Hallowell, ME
-                </p>
-            </div>
-            <div class="details__column col-sm-6">
-                <h2>
-                    Reception
-                </h2>
+                    <p>
+                        Sacred Heart Church <br/>
+                        12 Summer St. <br/>
+                        Hallowell, ME
+                    </p>
+                </div>
+                <div class="details__column col-sm-6">
+                    <h2>
+                        <strong>
+                            Reception &ndash;
+                        </strong>
 
-                <p>
-                    4:00PM
-                </p>
+                        <span class="details__column__time">
+                            4:00PM
+                        </span>
+                    </h2>
 
-                <p>
-                    <strong>Trott Farm</strong> <br/>
-                    98 Trott Rd.<br/>
-                    Richmond, ME
-                </p>
+                    <p>
+                        Trott Farm <br/>
+                        98 Trott Rd.<br/>
+                        Richmond, ME
+                    </p>
+                </div>
             </div>
         </div>
     </section>

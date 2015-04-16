@@ -1,44 +1,39 @@
-// Top bar is the coral line under the main header section.
-.header-wrap__top-bar {
-  height: 5px;
-  width: 100%;
-  background-color: $coral;
-}
-.header-wrap {
-  top: 0;
-  left: 0;
-  z-index: 100;
-  height: auto;
-  margin-bottom: 30px;
-  width: 100%;
-}
-.header {
+@include component(header) {
   background-color: darken($blue, 10%);
   color: lighten($green, 15%);
   font-size: 18px;
   font-weight: 200;
   min-height: 180px;
   padding: 40px 0;
-  transition: 150ms ease-in-out all;
-}
-// Header font styles.
-.header h1,
-.header p {
-  margin: 0;
-  padding: 0 20px;
-}
-.header h1 {
-  font-size: 22px;
-  font-weight: 400;
-  transition: 150ms ease-in-out font-size;
-}
+  text-align: center;
 
-.countdown-wrap {
-  font-size: 14px;
+  h1 {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+@include component(header-wrap) {
+  height: auto;
+  margin-bottom: 30px;
+  width: 100%;
+
+  @include part(top-bar) {
+    height: 5px;
+    width: 100%;
+    background-color: $coral;
+  }
+}
+@include component(countdown-wrap) {
   margin-top: 20px;
   padding: 0 45px;
-  text-transform: uppercase;
+
+  > p {
+    font-size: 20px;
+  }
 }
-.countdown-wrap > p {
-  font-weight: 700;
+@include component(countdown) {
+  font-size: 17px;
 }

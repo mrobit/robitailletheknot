@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "hammer.js": "~2.0.4",
-    "mediaelement": "~2.16.3"
+    "mediaelement": "~2.16.3",
+    "normalize-scss": "~3.0.2"
   }
 }
