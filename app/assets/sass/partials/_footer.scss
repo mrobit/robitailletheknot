@@ -7,12 +7,13 @@
   }
 
   @include component(copyright) {
-    font-size: 13px;
+    font-size: 16px;
     margin: 0;
     padding: 30px 0;
+    text-align: center;
 
     &, a {
-      color: #fff;
+      color: darken($green, 40%);
     }
   }
 }
