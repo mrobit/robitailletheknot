@@ -4,7 +4,7 @@
     <section class="details container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="details__header text-center">
+                <h1 class="details__header section-header">
                     Where and when?
                 </h1>
             </div>
@@ -12,7 +12,7 @@
         <div class="row text-center">
             <div class="col-md-6 col-md-offset-3">
                 <div class="details__column col-sm-6">
-                    <h2>
+                    <h2 class="details__column__header section-header --small ">
                         <strong>
                             Ceremony &ndash;
                         </strong>
@@ -29,7 +29,7 @@
                     </p>
                 </div>
                 <div class="details__column col-sm-6">
-                    <h2>
+                    <h2 class="details__column__header section-header --small ">
                         <strong>
                             Reception &ndash;
                         </strong>
